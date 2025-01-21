@@ -7,50 +7,186 @@
      <title>Kids-Education</title>
      <!-- root css file's -->
      <link rel="stylesheet" href="style.css">
-     <!-- That's Bootstrap Icon link -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
      <div class="container">
-          <div class="header">
+
+          <!-- header -->
+          <header>
+               <!-- marquees -->
+               <marquee scrollamount="12" behavior="scroll" direction="left">Empowering
+                    students from small
+                    age towards vision</marquee>
                <nav>
-                    <div class="logo">
-                         <img src="./assets/logo.png" alt="">
+                    <div class="logo ">
+                         <img src="./assets/logo.png" alt=""> School
                     </div>
                     <ul>
-                         <li><a href="#">Home</a></li>
-                         <li><a href="#">About</a></li>
-                         <li><a href="#">Facilities</a></li>
-                         <li><a href="#">Admission</a></li>
+                         <li><a href="#home">Home</a></li>
+                         <li><a href="#About">About</a></li>
+                         <li><a href="#Facilities">Facilities</a></li>
+                         <li><a href="#Admission">Admission</a></li>
                     </ul>
-                    <button>Contact</button>
-                    <button><i class="bi bi-list"></i></button>
+                    <div class="menu-btn">
+                         <button class="btn">Contact</button>
+                         <button class="menu"><i class="bi bi-list"></i></button>
+                    </div>
                </nav>
-          </div>
-          <!-- End of the header 
-          <div class="content">
-               <div class="left">
-                    <h2>Our Vision</h2>
-                    <p>Our vision is to provide a platform for kids to learn and grow. We believe that every child has
-                         the potential to do great things. We want to help them reach their full potential by providing
-                         them with the tools they need to succeed. Our goal is to create a safe and supportive
-                         environment where kids can learn, grow, and thrive.</p>
+               <div id="home" class="hero_section">
+                    <div class="hero_left">
+                         <h1>
+                              <span>Empowering</span> <br>
+                              <span>students from small <br> age</span>
+                              <span>towards vision</span>
+                         </h1>
+                         <p>With the courage, Confidence, Creativity and Compassion to make their Unique Contribution in
+                              a Diverse and Dynamic
+                              World.</p>
+                         <button class="btn">Enroll Now</button>
+                    </div>
+                    <div class="hero_right">
+                         <img src="./assets/hero-kids.png" alt="">
+                    </div>
+
                </div>
-               <div class="right">
-                    <h2>Our Mission</h2>
-                    <p>Our mission is to provide high-quality educational resources for kids of all ages. We want to
-                         help kids develop the skills they need to succeed in school and in life. We believe that every
-                         child deserves a quality education, and we are committed to providing that education to as many
-                         kids as possible. We want to help kids reach their full potential and become the best version
-                         of themselves.</p>
+          </header>
+          <!-- End of the header -->
+          <section id="Facilities" class="curriculum">
+               <div class="curriculum_left">
+                    <h1>Standard Curriculum</h1>
+
+                    <div class="cars">
+                         <div class="card card1">
+                              <img src="./assets/kinder.png" alt="">
+                              <h2>Kinder (3-6) Years</h2>
+                              <p>Cum sociis natoque penatibus et magnis
+                                   dis parturient montes, nascetur ridiculus
+                                   mu sdis parturient</p>
+                              <button class="card1_btn">Read More</button>
+                         </div>
+                         <div class="card card2">
+                              <img src="./assets/elementary.png" alt="">
+                              <h2>Elementary School</h2>
+                              <p>Cum sociis natoque penatibus et magnis
+                                   dis parturient montes, nascetur ridiculus
+                                   mu sdis parturient</p>
+                              <button class="card2_btn">Read More</button>
+                         </div>
+                         <div class="card card3">
+                              <img src="./assets/middle.png" alt="">
+                              <h2>Middle (10-16) Years</h2>
+                              <p>Cum sociis natoque penatibus et magnis
+                                   dis parturient montes, nascetur ridiculus
+                                   mu sdis parturient</p>
+                              <button class="card3_btn">Read More</button>
+                         </div>
+                    </div>
+                    <div class="bottom_arrow">
+                         <button><i class="fa-solid fa-chevron-left"></i></button>
+                         <button><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
                </div>
-          </div>
-          <div class="footer">
-               <p>&copy; 2021 Kids-Education. All rights reserved.</p>
-          </div>
-          -->
+          </section>
+
+          <section class="curriculum Our_Stories">
+
+               <div id="Admission" class="curriculum_left ">
+                    <h1>Our Stories</h1>
+                    <div class="story_card_box cars">
+                         <div class="Stories-left">
+                              <!-- stroies-left -->
+                              <div class="story_1">
+                                   <img src="./assets/story-1.png" alt="">
+                                   <div class="card_text_section">
+                                        <h3>A fun toddler coloring training on
+                                             classroom</h3>
+                                        <p>Beautiful branding for changes by Never Now in Australia.
+                                             changes is a platform for open discussion in an inclusive and
+                                             collaborative environment, providing the...</p>
+                                        <button>November 19, 2019</button>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="Stories_right">
+                              <div class=" story_card">
+                                   <img src="./assets/story-2.png" alt="">
+                                   <div class="card_text_section">
+                                        <h3>Find out if a school fits the
+                                             family’s needs</h3>
+                                        <button style="background-color: var(--orange) ">November 19, 2019</button>
+                                   </div>
+                              </div>
+                              <div class=" story_card">
+                                   <img src="./assets/story-3.png" alt="">
+                                   <div class="card_text_section">
+                                        <h3>Summer math & literacy
+                                             centres for kids</h3>
+                                        <button style="background-color: var(--purple) ">November 19, 2019</button>
+                                   </div>
+                              </div>
+                              <div class=" story_card">
+                                   <img src="./assets/story-4.png" alt="">
+                                   <div class="card_text_section">
+                                        <h3>Classroom management
+                                             techniques for new tutors</h3>
+                                        <button style="background-color: var(--sky) ">November 19, 2019</button>
+                                   </div>
+                              </div>
+                              <div class=" story_card">
+                                   <img src="./assets/story-5.png" alt="">
+                                   <div class="card_text_section">
+                                        <h3>Conversation rhymes
+                                             improve kids listening</h3>
+                                        <button style="background-color: var(--gray_sky) ">November 19, 2019</button>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="story_bottom_arrow">
+                    <button class="btn">View More <i class="fa-solid fa-arrow-right"></i></button>
+               </div>
+          </section>
+          <footer id="About">
+               <div class="for_footter_content">
+                    <div class="footer_left">
+
+                         <div class="footer_logo">
+                              <img src="./assets/logo_2.png" alt="">
+                              <h1>Kids <br>
+                                   Education</h1>
+                         </div>
+                         <p>Pizza ipsum dolor meat lovers buffalo. Deep dolor roll melted bacon Bianca pan bacon
+                              pineapple Aussie. Mayo rib sauce
+                              Hawaiian meatball.</p>
+
+                    </div>
+                    <div class="footer_mid">
+                         <!-- footer_mid -->
+                         <h2>About School</h2>
+                         <ul>
+                              <li><a href="#">Home</a></li>
+                              <li><a href="#">About</a></li>
+                              <li><a href="#">Facilities</a></li>
+                              <li><a href="#">Admission</a></li>
+                         </ul>
+                    </div>
+                    <div class="footer_right">
+                         <h2>Keep in Touch</h2>
+                         <ul>
+                              <li><img src="./assets/fb.png" alt=""></li>
+                              <li><img src="./assets/dribble.png" alt=""></li>
+                              <li><img src="./assets/twitter.png" alt=""></li>
+                              <li><img src="./assets/google+.png" alt=""></li>
+                         </ul>
+                    </div>
+               </div>
+          </footer>
+
+
      </div>
 </body>
 

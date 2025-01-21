@@ -504,7 +504,7 @@ footer {
     position: relative;
   }
   footer {
-    
+    padding-block: 30px !important;
     padding-inline: 10% !important;
   }
 }
@@ -562,6 +562,7 @@ footer {
     position: relative;
   }
   footer {
+    padding-block: 30px !important;
     padding-inline: 5% !important;
     /* flex-direction: column !important; */
   }

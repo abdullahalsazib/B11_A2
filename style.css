@@ -36,6 +36,7 @@ a {
 /* container */
 .container {
   width: 100%;
+  overflow: hidden;
 }
 header marquee {
   padding-inline: 20%;
@@ -51,7 +52,7 @@ nav {
   justify-content: space-between;
   padding-inline: 20%;
   /* padding-inline: 186px; */
-  /* padding-block: 10px; */;
+  /* padding-block: 10px; */
 }
 .logo {
   font-size: 2.2rem;
@@ -113,6 +114,10 @@ nav ul li:nth-child(3) a {
 .menu-btn button i {
   padding: 10px 10px;
   font-size: 31px;
+  
+}
+.Menu_close{
+  display: none;
 }
 
 /* hero_section */
@@ -157,7 +162,7 @@ nav ul li:nth-child(3) a {
 
 .curriculum {
   width: 100%;
-  height: 879px;
+  height: auto;
   background: url("./assets/bg.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -262,10 +267,18 @@ nav ul li:nth-child(3) a {
   color: var(--white);
 }
 
+.stories_section {
+  padding-block: 80px;
+}
 /* Our_Stories */
+.stories_section h1 {
+  text-align: center;
+  font-size: 3rem;
+}
 .Our_Stories {
   width: 100%;
-  height: 1018.02px;
+  height: auto;
+  padding-block: 20px;
 
   background: url(image.png),
     linear-gradient(
@@ -336,6 +349,7 @@ nav ul li:nth-child(3) a {
   align-items: center;
   justify-content: center;
   gap: 30px;
+  padding-block: 50px;
 }
 .Stories_right {
   display: grid;
@@ -373,7 +387,8 @@ nav ul li:nth-child(3) a {
 
 footer {
   padding-inline: 20%;
-  height: 519px;
+  padding-block: 30px;
+  height: 515px;
   background: var(--blue);
   display: flex;
   flex-direction: row;
@@ -447,140 +462,248 @@ footer {
   background: var(--purple);
 }
 
-
 /* End of the footer */
 
 /* start of the media queries */
 
+/* for 1920px */
+@media screen and (max-width: 1920px) {
+  .Stories-left {
+    display: none !important;
+  }
+  .Stories_right {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 25px;
+    position: relative;
+  }
+}
+
+/* for 1440px */
+@media screen and (max-width: 1440px) {
+  nav {
+    padding-inline: 10% !important;
+  }
+  .hero_section {
+    padding-inline: 10% !important;
+  }
+  .curriculum {
+    padding-inline: 5% !important;
+  }
+  .curriculum_left {
+    padding-inline: 0% !important;
+  }
+
+  .cars .card {
+    gap: 20px !important;
+  }
+  .Stories_right {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 25px;
+    position: relative;
+  }
+  footer {
+    
+    padding-inline: 10% !important;
+  }
+}
+
 /* for 1024px */
 @media screen and (max-width: 1024px) {
-  nav, .hero_section, .curriculum_left, footer {
-    padding-inline: 10%;
+  marquee {
+    display: none;
   }
-  
+  nav {
+    /* background-color: red !important; */
+    padding-inline: 5% !important;
+    padding-block: 10px !important;
+  }
   .hero_section {
-    flex-direction: column;
-    text-align: center;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column-reverse !important;
+    padding-block: 0px !important;
+    padding-inline: 0% !important;
+    gap: 20px !important;
   }
-  
   .hero_left {
-    width: 100%;
-    align-items: center;
-  }
-  
-  .cars {
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .story_card_box {
-    flex-direction: column;
-  }
-  
-  .Stories_right {
-    grid-template-columns: 1fr;
-  }
-  
-  .for_footter_content {
+    width: auto !important;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    justify-content: center;
     text-align: center;
+    padding-inline: 20px;
   }
-  
-  .footer_left {
+  .hero_left h1 {
     width: 100%;
-    align-items: center;
+  }
+  .curriculum {
+    padding-inline: 2% !important;
+  }
+  .curriculum_left {
+    padding-inline: 0% !important;
+  }
+  .cars .card {
+    gap: 20px !important;
+  }
+  .bottom_arrow button {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .bottom_arrow button i {
+    font-size: 20px !important;
+  }
+  .Stories_right {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 25px;
+    position: relative;
+  }
+  footer {
+    padding-inline: 5% !important;
+    /* flex-direction: column !important; */
+  }
+  .for_footter_content{
+    flex-direction: column !important;
+    align-items: start;
+    justify-content: start;
+    gap: 30px !important;
+  }
+  .footer_left{
+    width: 100% !important;
+  }
+  .footer_mid{
+    gap: 10px !important;
+  }
+  .footer_mid ul{
+    gap: 10px !important;
+  }
+  .footer_right{
+    width: 100% !important;
+    align-items: start !important;
   }
 }
 
 /* for 768px */
 @media screen and (max-width: 768px) {
   nav {
-    flex-direction: column;
-    gap: 20px;
-    padding-block: 20px;
+    /* background-color: green !important; */
+    padding-inline: 5% !important;
+    position: relative;
   }
-  
-  .menu-btn button:nth-child(2) {
-    display: block;
+  .Menu_close {
+    display: block !important;
+    position: absolute;
+    top: 40px;
+    right: 40px;
   }
-  
+  nav ul button {
+    font-size: 30px !important;
+    border: none !important;
+    outline: none;
+    background: none !important;
+  }
   nav ul {
-    display: none;
-  }
-  
-  .hero_section .hero_left h1 {
-    font-size: 2.5rem;
-  }
-  
-  .card {
-    width: 90%;
-    height: auto;
-    padding: 30px 20px;
-  }
-  
-  .story_1 {
-    width: 100% !important;
-    height: auto;
-  }
-  
-  .story_card {
+    /* display: none !important; */
+    position: absolute;
+    top: 0px;
+    right: 0px;
     width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+  }
+  .open {
+    transform: translateX(0%) !important;
+    transition: all 0.5s ease-in-out;
+  }
+  .hero_left {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+  .menu-btn button:nth-child(1) {
+    display: none !important;
+  }
+  .menu-btn button:nth-child(2) {
+    display: block !important;
+    background: none !important;
+    cursor: pointer;
+    border: none !important;
+    outline: none !important
+  }
+  .hero_right {
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero_right img {
+    width: 90% !important;
+  }
+
+  .hero_left h1 {
+    font-size: 2.5rem !important;
+  }
+  .hero_left p {
+    font-size: 1.2rem !important;
+  }
+
+  .curriculum {
+    padding-inline: 5% !important;
+  }
+  .curriculum_left {
+    padding-inline: 0% !important;
+    flex-direction: column !important;
+  }
+  .cars {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  .cars .card {
+    width: 100% !important;
+  }
+  .Stories_right {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    position: relative;
+    padding-inline: 10px;
+  }
+  .story_card {
+    width: auto;
+    
+  }
+  .story_bottom_arrow button {
+    font-size: 18px !important;
+  }
+  .story_card .card_text_section {
+    padding-inline: 10px !important;
   }
 }
 
 /* for 425px */
 @media screen and (max-width: 425px) {
-  header marquee {
-    padding-inline: 5%;
-    font-size: 1rem;
+ 
+  .stories_section{
+    padding-block: 20px !important;
   }
-  
-  .logo {
-    font-size: 1.8rem;
-  }
-  
-  .hero_section .hero_left h1 {
-    font-size: 2rem;
-  }
-  
-  .curriculum_left h1 {
-    font-size: 2rem;
-  }
-  
-  .bottom_arrow button {
-    width: 45px;
-    height: 45px;
-  }
-  
-  .footer_mid ul li a {
-    font-size: 1.2rem;
+  .Stories_right {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 5px;
+    position: relative;
+    padding-inline: 10px;
   }
 }
 
-/* for 375px and below */
-@media screen and (max-width: 375px) {
-  .hero_section .hero_left h1 {
-    font-size: 1.8rem;
-  }
-  
-  .btn {
-    font-size: 1rem;
-    padding: 8px 20px;
-  }
-  
-  .card {
-    padding: 20px 15px;
-  }
-}
-
-/* for 320px */
-@media screen and (max-width: 320px) {
-  .container {
-    padding-inline: 1%;  
-  }
-}
-
-
-/* End of the media queries */  
+/* End of the media queries */

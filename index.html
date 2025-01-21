@@ -29,10 +29,11 @@
                          <li><a href="#About">About</a></li>
                          <li><a href="#Facilities">Facilities</a></li>
                          <li><a href="#Admission">Admission</a></li>
+                         <button class="Menu_close"><i class="fa-solid fa-close"></i></button>
                     </ul>
                     <div class="menu-btn">
                          <button class="btn">Contact</button>
-                         <button class="menu"><i class="bi bi-list"></i></button>
+                         <button class="menu"><i class="fa-solid fa-bars"></i></button>
                     </div>
                </nav>
                <div id="home" class="hero_section">
@@ -42,6 +43,7 @@
                               <span>students from small <br> age</span>
                               <span>towards vision</span>
                          </h1>
+
                          <p>With the courage, Confidence, Creativity and Compassion to make their Unique Contribution in
                               a Diverse and Dynamic
                               World.</p>
@@ -91,11 +93,11 @@
                </div>
           </section>
 
-          <section class="curriculum Our_Stories">
+          <section class="Our_Stories">
 
-               <div id="Admission" class="curriculum_left ">
+               <div id="Admission" class="stories_section ">
                     <h1>Our Stories</h1>
-                    <div class="story_card_box cars">
+                    <div class="story_card_box">
                          <div class="Stories-left">
                               <!-- stroies-left -->
                               <div class="story_1">
@@ -110,6 +112,7 @@
                                    </div>
                               </div>
                          </div>
+                         <!-- Stories-right -->
                          <div class="Stories_right">
                               <div class=" story_card">
                                    <img src="./assets/story-2.png" alt="">
@@ -188,6 +191,22 @@
 
 
      </div>
+
+     <script>
+          const menu = document.querySelector('.menu');
+          const nav = document.querySelector('nav ul');
+
+          const Menu_close = document.querySelector('.Menu_close');
+
+
+
+          menu.addEventListener('click', () => {
+               nav.classList.add('open')
+          })
+          Menu_close.addEventListener('click', () => {
+               nav.classList.remove('open')
+          })
+     </script>
 </body>
 
 </html>
